@@ -1,4 +1,4 @@
-# Bean Leaf Lesions Classificatoin
+# Bean Leaf Lesions Classification
 ## Problem and Project Description
 In the realm of professional football, a player transfer takes place when a player, under contractual obligations, transitions from one club to another. This intricate process involves the official relocation of a player's registration from their current football club to a new one. Typically, the transfer initiation occurs when a representative from an interested club officially inquires with the club where their prospective player is currently registered. If the selling club expresses an openness to the idea, negotiations commence for a transfer fee. These negotiations are often facilitated by intermediaries and involve determining the financial compensation to be paid by the acquiring club. However, price negotiations between clubs are time-consuming and lack standardization. Nowadays, the player's current club often aims to maximize the price for their player, contributing to significant inflation in the football player market value.
 
