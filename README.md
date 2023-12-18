@@ -1,8 +1,16 @@
 # Bean Leaf Lesions Classification
 ## Problem and Project Description
-In the realm of professional football, a player transfer takes place when a player, under contractual obligations, transitions from one club to another. This intricate process involves the official relocation of a player's registration from their current football club to a new one. Typically, the transfer initiation occurs when a representative from an interested club officially inquires with the club where their prospective player is currently registered. If the selling club expresses an openness to the idea, negotiations commence for a transfer fee. These negotiations are often facilitated by intermediaries and involve determining the financial compensation to be paid by the acquiring club. However, price negotiations between clubs are time-consuming and lack standardization. Nowadays, the player's current club often aims to maximize the price for their player, contributing to significant inflation in the football player market value.
+Bean crops are susceptible to various diseases, and early detection of these diseases is crucial for ensuring a healthy harvest. One common issue is the development of leaf lesions, which can be caused by diseases such as angular leaf spot, bean rust, or may indicate a healthy leaf. Traditional methods of disease diagnosis can be time-consuming and may not provide timely information for effective intervention.
 
-This project is dedicated to the prediction of football players' market values, drawing insights from their in-game, profile, and attribute statistics. Utilizing machine learning techniques, we aim to provide a valuable tool for clubs, agents, and enthusiasts, enabling them to assess and comprehend the market value of players. The predictive player valuation model can help professional clubs to setting a reasonable starting point for negotiations regarding a player's price.
+In this project, we aim to develop a deep learning model for the automated classification of bean leaf lesions into three classes: angular leaf spot, bean rust, and healthy. By leveraging the power of convolutional neural networks (CNNs), we intend to create a robust solution that can accurately identify and classify lesions based on images of bean leaves.
+
+<img width="908" alt="image" src="https://github.com/ryanpram/bean-leaf-lesions-classification/assets/34083758/9f424e67-f813-4037-a467-f5b2b199f809">
+
+
 
 ## Dataset
-The dataset of this project taken from [Kaggle Dataset link](https://www.kaggle.com/datasets/davidcariboo/player-scores). In this project we dont use all of available data from the kaggle. The used dataset: apperances.csv, games.csv, players.csv. The used dataset can check and download in this repository , spesifically on [data-raw](./data-raw) folder.
+The dataset of this project taken from [Kaggle Dataset link](https://www.kaggle.com/datasets/marquis03/bean-leaf-lesions-classification/data). The used dataset also can download from following gdrive link : https://drive.google.com/file/d/1zyce3Y661pJ82PfCe0Kp93N2-Nkz1Var/view?usp=sharing.
+Alternatively can run below commmad:
+```python
+!gdown --id '1zyce3Y661pJ82PfCe0Kp93N2-Nkz1Var' 
+```
