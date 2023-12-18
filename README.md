@@ -21,7 +21,7 @@ To run this project, you will need the following dependencies:
 * tensorflow==2.9.1
 
 ## Model Creation
-In this project, we employ the Convolutional Neural Network (CNN) architecture, specifically Xception. Xception is a deep convolutional neural network architecture that utilizes Depthwise Separable Convolutions[reference](https://maelfabien.github.io/deeplearning/xception/). Additionally, we apply transfer learning techniques using pre-trained weights from 'imagenet'.
+In this project, we employ the Convolutional Neural Network (CNN) architecture, specifically Xception. Xception is a deep convolutional neural network architecture that utilizes Depthwise Separable Convolutions ([reference](https://maelfabien.github.io/deeplearning/xception/)). Additionally, we apply transfer learning techniques using pre-trained weights from 'imagenet'.
 
 ## Evaluation Metric
 Since the used dataset in this project are balance, so we use accuracy as our evaluation metric. The formula is showed below:
