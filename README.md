@@ -40,6 +40,6 @@ From the exploration, we determined that **Xception** model with dropout regular
 - inner size : 100
 - droprate : 0.8
 
-For detailed exploration, please refer to [the notebook](`./Exploration Notebook.ipynb`)
+For detailed exploration, please refer to [the notebook](./exploration_notebook.ipynb)
 
 
