@@ -14,3 +14,32 @@ Alternatively can run below commmad:
 ```python
 !gdown --id '1zyce3Y661pJ82PfCe0Kp93N2-Nkz1Var' 
 ```
+
+## Dependencies
+To run this project, you will need the following dependencies:
+* Python 3.9.13
+* tensorflow==2.9.1
+
+## Model Creation
+In this project, we employ the Convolutional Neural Network (CNN) architecture, specifically Xception. Xception is a deep convolutional neural network architecture that utilizes Depthwise Separable Convolutions ([reference](https://maelfabien.github.io/deeplearning/xception/)). Additionally, we apply transfer learning techniques using pre-trained weights from 'imagenet'.
+
+## Evaluation Metric
+Since the used dataset in this project are balance, so we use accuracy as our evaluation metric. The formula is showed below:
+
+$$\ \text{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN} \$$
+
+Where:
+- $TP$ (True Positives): The number of samples correctly predicted as positive (correctly classified instances of the positive class).
+- $TN$ (True Negatives): The number of samples correctly predicted as negative (correctly classified instances of the negative class).
+- $FP$ (False Positives): The number of samples incorrectly predicted as positive (instances of the negative class misclassified as the positive class).
+- $FN$ (False Negatives): The number of samples incorrectly predicted as negative (instances of the positive class misclassified as the negative class).
+
+## Best Model
+From the exploration, we determined that **Xception** model with dropout regularization modification is the best model. Best model achieving Accuracy scores of **94.7%** for the validation data. Founded best param listed below:
+- learning rate: 0.01
+- inner size : 100
+- droprate : 0.8
+
+For detailed exploration, please refer to [the notebook](./exploration_notebook.ipynb)
+
+
