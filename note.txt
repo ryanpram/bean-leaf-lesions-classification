@@ -1,0 +1,11 @@
+691449507804.dkr.ecr.ap-southeast-1.amazonaws.com/bean-leaf-tflite-images
+
+aws ecr get-login-password --region ap-southeast-1 | docker login --username AWS --password-stdin 691449507804.dkr.ecr.ap-southeast-1.amazonaws.com/bean-leaf-tflite-images
+
+ACCOUNT=691449507804
+REGION=ap-southeast-1
+REGISTRY=bean-leaf-tflite-images
+PREFIX=${ACCOUNT}.dkr.ecr.${REGION}.amazonaws.com/${REGISTRY}
+
+TAG=bean-leaf-xception-v4-001
+REMOTE_URI=${PREFIX}:${TAG}
