@@ -84,19 +84,25 @@ After successfully encapsulating our model within a Docker container, we are now
 ```python
 aws ecr create-repository --repository-name bean-leaf-tflite-images
 ```
+
 2. Login to our ECR repo (our container repository service provider in AWS)
 ```python
 aws ecr get-login-password --region <your-aws-region> | docker login --username AWS --password-stdin <your-aws-id>.dkr.ecr.<your-aws-region>.amazonaws.com/bean-leaf-tflite-images
 ```
+
 3. Push our created docker container on local to the our ECR repo
 ```python
 docker tag <image_name_in_your_local_desktop>:latest <repo_URI>/<repo_name_in_ECR>:latest
 ```
+
 4. Create Lambda Function with container image as our function option. Select our created ECR repo.
 <img width="1312" alt="image" src="https://github.com/ryanpram/bean-leaf-lesions-classification/assets/34083758/214d92ff-7994-4ff5-b410-153229659bb2">
+
 5. Create Rest API with API Gateway. Click "Create API" button to create api and add post resource with "/predict" endpoint route. Last but not least, click "Deploy API" button
 <img width="1068" alt="image" src="https://github.com/ryanpram/bean-leaf-lesions-classification/assets/34083758/5538aa90-febe-413e-a4df-60e16c78ba28">
 <img width="1068" alt="image" src="https://github.com/ryanpram/bean-leaf-lesions-classification/assets/34083758/c7044440-8243-4860-bf50-4e912566c61e">
+
+
 6. Test with [test.py](./test.py) script and change the url to your created rest api endpoint.
 
 This project already deployed to AWS that can be accessed on:
