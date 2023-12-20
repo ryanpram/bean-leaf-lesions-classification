@@ -28,7 +28,7 @@ Project dependencies can be installed by running:
 pip install -r requirements.txt
 ```
 
-Alternatively, can use Conda virtual environment with prepared [environtment.yml](./environtment.yml) file:
+Alternatively, can use Conda virtual environment with prepared [environment.yml](./environment.yml) file:
 ```python
 conda env create -f opt/environment.yml
 ```
