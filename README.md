@@ -28,6 +28,10 @@ Project dependencies can be installed by running:
 pip install -r requirements.txt
 ```
 
+Alternatively, can use Conda virtual environment with prepared [environtment.yml](./environtment.yml) file:
+```python
+conda env create -f opt/environment.yml
+```
 
 This experiment was run on saturn cloud [saturn.io](https://saturncloud.io/), using single TPU.
 
