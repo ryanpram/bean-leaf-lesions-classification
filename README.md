@@ -56,12 +56,12 @@ For detailed exploration, please refer to [the notebook](./exploration_notebook.
 ## Model Deployment On Local
 The bean leaf model is served through aws lambda function. For that purposes, the first step is prepare the script and test it on local. Below is step by step how to do it:
 1. Minimize trained model  ([xception_bean_leaf_16_0.947.h5](./saved-model/xception_bean_leaf_16_0.947.h5)) through convert it to more lightweight version in tflite model. Full implementation of the conversion can refer this [notebook](./conversion_to_tflite.ipynb). The process will result an .tflite model, that can be found in [here](./bean-leaf-model.tflite)
-2. After it we need to prepare script for get the image input , throw it to the model and return the prediction score as a response. The script is written on [lambda_function.py](./lambda_function.py). The script basically contain predict function that will preprocess input image, interprete the tflite model, put the input to the model and return the model prediction scores.
+2. After it we need to prepare script for get the image input , throw it to the model and return the prediction score as response. The script is written on [lambda_function.py](./lambda_function.py). The script basically contain predict function that will preprocess input image, interprete the tflite model, put the input to the model and return the model prediction scores.
 3. Test the lambda_function with simply import the script function like below image. if its implemented correctly , it will return model prediction. For the input, its accept image url. you can host your image first on any file hosting provider or simpy use this sample image: https://drive.google.com/uc?export=view&id=1MGvOaIy94muwFCofOd88pNRszUUiwdvf. For generate  image direct link in gdrive, check this [url](https://www.makeuseof.com/create-direct-link-google-drive-files/).
    <img width="1003" alt="image" src="https://github.com/ryanpram/bean-leaf-lesions-classification/assets/34083758/256b7f32-4be2-4f15-9351-d0eec198df57">
 
 ## Containerize Model Using Docker
-For the sake of portability and easeness of model deployment, we need to wrap our model using isoloted environment container (we using Docker here). The step by step:
+For the sake of portability and easeness of model deployment, we need to wrap our model using isolated environment container (we using Docker here). The step by step:
 1. Make sure your computer already have Docker Desktop or install [here](https://www.docker.com/products/docker-desktop/).
 2. Build docker image from prepared [Dockerfile script](./Dockerfile)
 ```python
